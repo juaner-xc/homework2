@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>菜单搜索器</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <h1>🍽️ 菜单搜索器</h1>
+    <p>输入关键词，快速找到你想吃的</p>
+    <div class="search-box">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="7"/>
+        <path d="m20 20-3.5-3.5"/>
+      </svg>
+      <input type="text" id="searchInput" placeholder="搜索菜品，例如：面、茶、蛋糕">
+    </div>
+  </header>
+
+  <main class="container">
+    <nav class="filters" id="filters">
+      <button class="filter active" data-category="all">全部</button>
+      <button class="filter" data-category="主食">主食</button>
+      <button class="filter" data-category="饮品">饮品</button>
+      <button class="filter" data-category="甜点">甜点</button>
+      <button class="filter" data-category="小吃">小吃</button>
+    </nav>
+
+    <div class="menu-grid" id="menuGrid"></div>
+    <p class="empty" id="empty" hidden>没有找到相关菜品</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
